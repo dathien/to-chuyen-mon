@@ -28,6 +28,26 @@
 .slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border:1px solid #d8e4ef;border-radius:50%;background:rgba(255,255,255,.9);color:#31506d;font-size:22px;display:grid;place-items:center;z-index:3;box-shadow:0 5px 14px rgba(15,23,42,.08)}.slider-btn:hover{background:#fff}.slider-prev{left:18px}.slider-next{right:18px}.slider-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:7px;z-index:3}.slider-dot{width:8px;height:8px;border:0;border-radius:999px;background:#b9c8d7;padding:0}.slider-dot.active{width:24px;background:#2563eb}
 @media(max-width:900px){.slide{grid-template-columns:minmax(0,1fr) 250px;gap:22px;padding-left:66px;padding-right:66px}.slide-art{height:125px}.art-design .paper.one{left:18px}.art-design .paper.two{right:18px}.art-review .paper{left:16px;width:216px}.art-output .paper{left:15px;width:145px}.art-output .doc{right:15px}}
 @media(max-width:700px){.hero-slider{min-height:250px;border-radius:18px;margin-bottom:16px}.slide{min-height:250px;grid-template-columns:1fr;padding:22px 48px 34px;gap:14px}.slide-art{height:105px;order:-1}.slide h3{font-size:18px}.slide p{font-size:12.5px;line-height:1.45}.slide-tag{font-size:10px;margin-top:7px}.slider-btn{width:30px;height:30px;font-size:18px}.slider-prev{left:8px}.slider-next{right:8px}.slider-dots{bottom:9px}.art-design .paper.one,.art-design .paper.two{height:78px;top:12px}.art-review .paper{height:80px;top:12px}.art-groups{padding:12px}.art-groups .group{height:78px}.art-output .paper{height:82px;top:11px}.art-output .doc{height:72px;top:16px}}
+
+/* v5.6 - Slider cân đối, minh họa 2.5D, điều hướng căn giữa */
+.hero-slider{min-height:230px}
+.slide{min-height:230px;padding:30px 92px 34px 92px;grid-template-columns:minmax(0,1fr) 390px;gap:46px}
+.slide-art{height:172px;border-radius:22px;overflow:visible;perspective:900px;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(241,247,255,.72));box-shadow:0 16px 36px rgba(30,64,175,.10)}
+.slide-art:before{content:"";position:absolute;inset:18px 26px -10px 26px;border-radius:22px;background:rgba(80,125,190,.10);filter:blur(12px);z-index:-1}
+.slide-art .paper{box-shadow:0 15px 26px rgba(15,23,42,.14),0 3px 0 rgba(148,163,184,.16);transform-style:preserve-3d}
+.art-design .paper.one{width:176px;height:122px;left:38px;top:23px;transform:rotate(-5deg) rotateY(8deg) translateZ(16px)}
+.art-design .paper.two{width:176px;height:122px;right:36px;top:27px;transform:rotate(5deg) rotateY(-8deg) translateZ(28px)}
+.art-review .paper{width:270px;height:132px;left:58px;top:20px;transform:rotateY(-7deg) rotateX(2deg) translateZ(22px)}
+.art-groups{padding:22px 20px;transform-style:preserve-3d}.art-groups .group{height:124px;box-shadow:0 14px 24px rgba(15,23,42,.10);transform:translateZ(12px) rotateX(2deg)}.art-groups .group:nth-child(2){transform:translateY(-8px) translateZ(26px);box-shadow:0 19px 30px rgba(15,23,42,.13)}
+.art-output .paper{width:205px;height:132px;left:34px;top:20px;transform:rotateY(8deg) rotate(-2deg) translateZ(16px)}.art-output .doc{right:38px;top:31px;width:106px;height:108px;transform:rotateY(-10deg) rotate(3deg) translateZ(28px);box-shadow:0 16px 28px rgba(15,23,42,.14)}
+.slider-btn{width:40px;height:40px;font-size:0;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;top:50%;transform:translateY(-50%)}
+.slider-btn::before{content:"";display:block;width:9px;height:9px;border-top:2px solid currentColor;border-right:2px solid currentColor;position:absolute;left:50%;top:50%}
+.slider-prev::before{transform:translate(-38%,-50%) rotate(-135deg)}
+.slider-next::before{transform:translate(-62%,-50%) rotate(45deg)}
+.slider-dots{bottom:15px}
+@media(max-width:900px){.hero-slider{min-height:215px}.slide{min-height:215px;grid-template-columns:minmax(0,1fr) 300px;gap:28px;padding:26px 72px 32px}.slide-art{height:154px}.art-design .paper.one,.art-design .paper.two{width:142px;height:108px}.art-review .paper{width:230px;left:34px}.art-output .paper{width:165px}.art-output .doc{right:22px}}
+@media(max-width:700px){.hero-slider{min-height:310px}.slide{min-height:310px;grid-template-columns:1fr;padding:24px 50px 38px;gap:16px}.slide-art{height:132px;order:-1}.slider-btn{width:34px;height:34px}.art-design .paper.one,.art-design .paper.two{height:92px;top:18px}.art-review .paper{height:96px;top:17px}.art-groups .group{height:90px}.art-output .paper{height:96px;top:16px}.art-output .doc{height:82px;top:23px}}
+
 </style></head>
 <body>
 <header class="header"><div class="headin"><div class="brand"><div class="logo">AI</div><div><h1>Tổ Chuyên Môn AI</h1><p>Trợ lý thiết kế và nâng cao chất lượng bài dạy</p><div class="teacher-name">GV. Hồ Nguyễn Đa Thiện</div></div></div></div></header>
